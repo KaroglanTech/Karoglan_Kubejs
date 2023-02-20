@@ -87,7 +87,7 @@ onEvent("command.registry", event => {
                     tellRaw(player, ' ["",{"text":"【@AT】","bold":true,"color":"gold"},{"text":"/at soundList","color":"yellow"},{"text":"  -  ","color":"white"},{"text":"查看可用音效列表","color":"green"}]')
                     tellRaw(player, ' ["",{"text":"【@AT】","bold":true,"color":"gold"},{"text":"/at setSound [数字]","color":"yellow"},{"text":"  -  ","color":"white"},{"text":"定制你的@音效","color":"green"}]')
                     //版权所有，请在修改时保留下列字段
-                    tellRaw(player, '["",{"text":"【@AT】","bold":true,"color":"gold"},{"text":"由米二(Tollainmear)开发","color":"gray"}]')
+                    tellRaw(player, '["",{"text":"【@AT】","bold":true,"color":"gold"},{"text":"Powered by Kubejs - Coding: Tollainmear","color":"gray"}]')
                     return 1
                 }
                 )
