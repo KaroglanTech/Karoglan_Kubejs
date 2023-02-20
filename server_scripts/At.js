@@ -27,10 +27,10 @@ onEvent('player.chat', e => {
         // if (ele == 'a') return
         if (ele.length() > 16) return
         let player = e.server.getPlayer(ele)
-        if(ignoreSelf){
-            if (player.toString() == e.player.toString()) return
-        }
         if (player != null) {
+            if (ignoreSelf) {
+                if (player.toString() == e.player.toString()) return
+            }
             player.tell('[' + e.player.toString() + '@了你]')
             tellRaw(player, '["",{"text":"【@AT】","bold":true,"color":"gold"},{"text":"' + player.toString() + '@了你","color":"yellow"}]')
             PlayAtSoundToPlayer(player)
