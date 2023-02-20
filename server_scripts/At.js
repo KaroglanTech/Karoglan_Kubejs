@@ -2,8 +2,8 @@
 //This work is licensed under  Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 
 //Plugin Config below
-//是否忽略对自己的@,建议开启，有时候会出现bug
-let ignoreSelf = false
+//是否忽略对自己的
+let ignoreSelf = true
 
 function RegistAtSound(name, type, speed) {
     let atSound = { soundName: name, soundType: type, soundSpeed: speed }
@@ -24,10 +24,8 @@ onEvent('player.chat', e => {
     let msg = e.message
     let arr = msg.split(' ')
     arr.forEach(ele => {
-        // if (ele == 'a') return
         if (ele.length() > 16) return
         let player = e.server.minecraftServer.playerList.getPlayerByName(ele)
-        console.log("[DEBUG]The ele is " + ele +", player is " + player.toString())
         if (player != null) {
             player = player.asKJS()
             if (ignoreSelf) {
